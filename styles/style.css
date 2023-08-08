@@ -2,17 +2,17 @@ body {
   max-width: 1440px;
   width: 100%;
   background-color: #fff;
+  margin: 0 auto;
 }
 .header {
-  padding: 92px 49px 92px 51px;
-  color: #000;
-}
-.header__container {
-  box-sizing: content-box;
   display: grid;
   grid-template-columns: 1fr 148px 1fr;
   align-items: center;
+  padding: 92px 49px 92px 51px;
+  color: #000;
+  box-sizing: content-box;
 }
+
 .menu-list {
   text-underline-offset: 5px;
   list-style: circle;
@@ -28,8 +28,11 @@ body {
 }
 .header__menu-item-link {
   margin-left: -5px;
-	text-decoration: none;
-	border-bottom: 0.5px solid rgb(0, 0, 0);
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.header__menu-item-link:hover {
+  color: red;
 }
 .header__logo {
   width: 148px;
@@ -39,23 +42,22 @@ body {
 .header__logo-image {
   height: 100%;
 }
-.contacts-list {
-  list-style: none;
+.address {
+  display: grid;
+  justify-self: end;
+  max-width: 240px;
+  width: 100%;
   font-size: 18px;
   line-height: 1.35;
   font-style: normal;
 }
-.header__contacts-list {
-  display: grid;
-  justify-content: end;
+.header__link {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-underline-offset: 4px;
 }
-.contacts-list-item_special {
-  height: 24px;
-}
-.header__link{
-	text-decoration: none;
-	border-bottom: 0.5px solid rgb(0, 0, 0);
-	text-underline-offset: 4px;
+.header__link:hover {
+  color: red;
 }
 
 .cover {
@@ -124,11 +126,12 @@ body {
   align-items: center;
   width: 257px;
   height: 52px;
-	background-color:transparent;
+  background-color: transparent;
   border: 1px solid #fff;
   font-size: 22px;
-	color: #FFF;
-	text-transform: uppercase;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .lots {
@@ -156,6 +159,9 @@ body {
 .card {
   position: relative;
   padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -181,8 +187,9 @@ body {
   line-height: 120%;
 }
 .card__text {
-  position: absolute;
-  inset: auto 40px 50px;
+  position: relative;
+  z-index: 1;
+  /*отправить текст вниз*/
   font-size: 20px;
   line-height: 120%;
 }
@@ -236,10 +243,13 @@ body {
   color: #000;
   font-size: 18px;
 }
-.footer__link{
-	text-decoration: none;
-	border-bottom: 0.5px solid rgb(0, 0, 0);
-	text-underline-offset: 4px;
+.footer__link {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-underline-offset: 4px;
+}
+.footer__link:hover {
+  color: red;
 }
 .footer__menu {
   text-align: center;
@@ -247,20 +257,26 @@ body {
 .footer__menu-list {
   list-style: none;
 }
-.footer__menu-link{
-	text-decoration: none;
-	border-bottom: 0.5px solid rgb(0, 0, 0);
+.footer__menu-link {
+  text-decoration: none;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
-.footer__menu-link_active{
-	text-decoration: none;
+.footer__menu-link:hover {
+  color: red;
+}
+.footer__menu-link_active {
+  border-bottom: 0;
+}
+.footer__menu-link_active:hover {
+  color: red;
 }
 .footer__social-list {
   display: flex;
   justify-content: space-between;
   width: 240px;
-  height: 48px;
   list-style: none;
 }
 .footer__social-icon {
+  max-height: 48px;
   height: 100%;
 }
