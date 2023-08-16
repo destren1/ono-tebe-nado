@@ -54,6 +54,7 @@ body {
 .header__link {
   text-decoration: none;
   border-bottom: 1px solid rgb(0, 0, 0);
+  width: max-content;
   text-underline-offset: 4px;
 }
 .header__link:hover {
@@ -189,7 +190,6 @@ body {
 .card__text {
   position: relative;
   z-index: 1;
-  /*отправить текст вниз*/
   font-size: 20px;
   line-height: 120%;
 }
